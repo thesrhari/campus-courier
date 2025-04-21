@@ -230,14 +230,13 @@ const TaskForm: React.FC<TaskFormProps> = ({ onSubmit, loading }) => {
                   }
                   // Required might be too strict here if allowing removal, validation done in submit
                   // required
-                  placeholder="e.g., Pen, A4 Notebook"
+                  placeholder="e.g., Pen, Notebook"
                   className="w-full px-2 py-1.5 border border-gray-300 dark:border-gray-600 rounded-md text-sm bg-white dark:bg-gray-700 text-black dark:text-white"
                 />
                 <datalist id={`stationery-options-${index}`}>
                   {STATIONERY_OPTIONS.map((opt) => (
                     <option key={opt} value={opt} />
                   ))}
-                  <option value="Other (Specify below)" />
                 </datalist>
               </div>
               <div className="w-20">
@@ -294,7 +293,7 @@ const TaskForm: React.FC<TaskFormProps> = ({ onSubmit, loading }) => {
               value={stationeryInfo}
               onChange={(e) => setStationeryInfo(e.target.value)}
               className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm bg-white dark:bg-gray-700 text-black dark:text-white"
-              placeholder="e.g., Specific brand, color preference..."
+              placeholder="e.g., Specific brand, color preference, no. of pages..."
             />
           </div>
         </fieldset>
